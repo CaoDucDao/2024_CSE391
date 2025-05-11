@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: #23918f;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+        .header {
+            background-color: #316CF4 ;align-items: center; padding: 1px 12px; display: flex ; justify-content: space-between;
+        }
+        h1 {
+            color: white;
+            font-size: 14px;
+        }
+        .honrizontal {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .honrizontal div {
+            flex: 1;
+            width: 100%;
+            padding: 8px 16px;
+        }
+
+        .form-container {
+            width: 650px;
+            border-radius: 2px;
+            background-color: aliceblue;
+        }
+
+        .honrizontal label {
+            display: block;
+        }
+
+        .honrizontal input {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            height: 24px;
+            width: 100%;
+        }
+
+        select {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            height: 28px;
+            width: 100%;
+        }
+
+        .content-container {
+            color: #2d2b2b;
+            font-size: 13px;
+        }
+
+        .sex-container {
+            margin-left: 18px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+
+        .sex-container div {
+            margin-top: 10px;
+        }
+
+        .location-button {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: end;
+            margin-bottom: 10px
+        }
+
+        button {
+            margin: 5px;
+            color: white;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[name="save"] {
+            background-color: #257543;
+        }
+
+        button[name="cancel"] {
+            background-color: #625f5f;
+        }
+
+        .close-button {
+            font-size: 32px;
+            background: none;
+            cursor: pointer;
+            color: #2b2a2a;
+            line-height: 0.4;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <form class="form-container"> 
+        <div>
+            <header class="header">
+                <div>
+                    <h1>New Employee</h1>
+                </div>
+                <button class="close-button">&times;</button>
+            </header>
+        </div>
+        <div class="content-container">
+            <div class="honrizontal">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+            <div class="honrizontal">
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="number" name="email">
+                </div>
+                <div>
+                    <label for="position">Position</label>
+                    <select name="position" >
+                        <option value="seclect">--Select position--</option>
+                        <option value="staff">Staff</option>
+                        <option value="manager">Manager</option>
+                        <option value="ceo">CEO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sex-container">
+                <label>Sex</label><br>
+                <div>
+                    <input type="radio" name="sex" value="male">
+                    <label>Male</label>
+                    <input type="radio" name="sex" value="female">
+                    <label>Felame</label>
+                </div>
+            </div>
+            <hr color="#ccc">
+
+            <div class="location-button">
+                <button name="save">Save</button>
+                <button name="cancel">Cancel</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
